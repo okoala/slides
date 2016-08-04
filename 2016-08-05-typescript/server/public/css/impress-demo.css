@@ -431,10 +431,10 @@ canvas {
 
 .color-text {
   overflow: hidden;
-  background-color: #333;
+  font-family: Open Sans,Arial,sans-serif;
   font-weight: bold;
-  font-family: "Oswald";
   outline: 1px solid transparent;
+  text-shadow: 1px 2px 2px #000;
   /* -webkit-transform: translateZ(-100px) rotateY(10deg) rotateX(30deg) rotateZ(-10deg); */
   /* transform: translateZ(-100px) rotateY(10deg) rotateX(30deg) rotateZ(-10deg); */
   /* -webkit-filter: drop-shadow(-30px 20px 10px rgba(0,0,0,0.4)); */
