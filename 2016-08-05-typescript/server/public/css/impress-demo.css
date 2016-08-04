@@ -231,27 +231,6 @@ a:focus {
   white-space: nowrap;
 }
 
-#title {
-  padding: 0;
-}
-
-#title .try {
-  font-size: 64px;
-  position: absolute;
-  top: -0.5em;
-  left: 1.5em;
-  transform: translateZ(20px);
-}
-
-#title h1 {
-  font-size: 190px;
-  transform: translateZ(50px);
-}
-
-#title .footnote {
-  font-size: 32px;
-}
-
 #big {
   width: 600px;
   text-align: center;
@@ -438,4 +417,65 @@ canvas {
   /* -webkit-transform: translateZ(-100px) rotateY(10deg) rotateX(30deg) rotateZ(-10deg); */
   /* transform: translateZ(-100px) rotateY(10deg) rotateX(30deg) rotateZ(-10deg); */
   /* -webkit-filter: drop-shadow(-30px 20px 10px rgba(0,0,0,0.4)); */
+}
+
+.button-gotoplay {
+  display: inline-block;
+  position: relative;
+  padding: 1.5em 3em;
+  border-radius: 50px;
+  background: #7986cb;
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button-gotoplay::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  bottom: -20px;
+  right: -20px;
+  background: inherit;
+  border-radius: 50px;
+  z-index: -1;
+  opacity: 0.4;
+  transform: scale3d(0.8, 0.5, 1);
+}
+
+.button-gotoplay:hover {
+  transition: background-color 0.1s 0.3s, color 0.1s 0.3s;
+  color: #ECEFF1;
+  background-color: #3f51b5;
+  animation: anim-moema-1 0.3s forwards;
+}
+
+.button-gotoplay:hover::before {
+  animation: anim-moema-2 0.3s 0.3s forwards;
+}
+
+@keyframes anim-moema-1 {
+	60% {
+		transform: scale3d(0.8, 0.8, 1);
+	}
+	85% {
+		transform: scale3d(1.1, 1.1, 1);
+	}
+	100% {
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+@keyframes anim-moema-2 {
+	to {
+		opacity: 0;
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+.playground {
+  text-align: center;
 }
