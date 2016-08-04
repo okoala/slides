@@ -41,207 +41,218 @@
 -->
 
 <html lang="zh">
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=1024" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>TypeScript入门介绍 | by koala huang @okoala</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=1024" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>TypeScript入门介绍 | by koala huang @okoala</title>
 
-    <meta name="description" content="typescript intro" />
-    <meta name="author" content="Koala Huang" />
+  <meta name="description" content="typescript intro" />
+  <meta name="author" content="Koala Huang" />
 
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+  <link href="http://fonts.useso.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
 
-    <link href="css/impress-demo.css" rel="stylesheet" />
+  <link href="css/impress-demo.css" rel="stylesheet" />
 
-    <link rel="shortcut icon" href="favicon.png" />
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="shortcut icon" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 </head>
 
 <body class="impress-not-supported">
 
   <div class="fallback-message">
-      <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
-      <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
   </div>
 
-<div id="impress">
-
-    <div id="bored" class="step slide" data-x="-1000" data-y="-1500">
-        <q>Aren’t you just <b>bored</b> with all those slides-based presentations?</q>
+  <div id="impress">
+    <div id="tiny" class="step" data-x="-1000" data-y="-2500">
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" class="color-text" width="600" height="400" viewBox="0 0 1200 400" class="">
+				<!-- add title for accessibility -->
+				<title>Adding Background to Text using SVG clipPath</title>
+				<defs class="">
+					<clipPath id="my-path">
+						<text x="50" y="300" font-size="200">TypeScript</text>
+					</clipPath>
+				</defs>
+				<image xlink:href="img/watercolor.jpg" clip-path="url(#my-path)" width="100%" height="100%" id="filler" preserveAspectRatio="none" class=""></image>
+			</svg>
     </div>
 
-    <div class="step slide" data-x="0" data-y="-1500">
-        <q>Don’t you think that presentations given <strong>in modern browsers</strong> shouldn’t <strong>copy the limits</strong> of ‘classic’ slide decks?</q>
+    <div id="bored" class="step slide" data-x="-1000" data-y="-1500" data-z="-100" data-rotate-x="-40" data-rotate-y="10">
+      <q>Aren’t you just <b>bored</b> with all those slides-based presentations?</q>
     </div>
 
-    <div class="step slide" data-x="1000" data-y="-1500">
-        <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
+    <div class="step slide" data-x="0" data-y="-1800">
+      <q>Don’t you think that presentations given <strong>in modern browsers</strong> shouldn’t <strong>copy the limits</strong> of ‘classic’ slide decks?</q>
+    </div>
+
+    <div class="step slide" data-x="1000" data-y="-1500" data-z="-100" data-rotate-x="40" data-rotate-y="-10">
+      <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
     </div>
 
     <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
-        <span class="try">then you should try</span>
-        <h1>impress.js<sup>*</sup></h1>
-        <span class="footnote"><sup>*</sup> no rhyme intended</span>
+      <span class="try">then you should try</span>
+      <h1>impress.js<sup>*</sup></h1>
+      <span class="footnote"><sup>*</sup> no rhyme intended</span>
     </div>
 
     <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
-        <p>It’s a <strong>presentation tool</strong> <br/>
-        inspired by the idea behind <a href="http://prezi.com">prezi.com</a> <br/>
-        and based on the <strong>power of CSS3 transforms and transitions</strong> in modern browsers.</p>
+      <p>It’s a <strong>presentation tool</strong> <br/> inspired by the idea behind <a href="http://prezi.com">prezi.com</a> <br/> and based on the <strong>power of CSS3 transforms and transitions</strong> in modern browsers.</p>
     </div>
 
     <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
-        <p>visualize your <b>big</b> <span class="thoughts">thoughts</span></p>
+      <p>visualize your <b>big</b> <span class="thoughts">thoughts</span></p>
     </div>
 
     <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
-        <p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b class="scaling">scaling</b> them on an infinite canvas</p>
+      <p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b class="scaling">scaling</b> them on an infinite canvas</p>
     </div>
 
     <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
-        <p>the only <b>limit</b> is your <b class="imagination">imagination</b></p>
+      <p>the only <b>limit</b> is your <b class="imagination">imagination</b></p>
     </div>
 
     <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
-        <p>want to know more?</p>
-        <q><a href="http://github.com/bartaz/impress.js">use the source</a>, Luke!</q>
+      <p>want to know more?</p>
+      <q><a href="http://github.com/bartaz/impress.js">use the source</a>, Luke!</q>
     </div>
 
     <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
-        <p>one more thing...</p>
+      <p>one more thing...</p>
     </div>
 
     <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
-        <p><span class="have">have</span> <span class="you">you</span> <span class="noticed">noticed</span> <span class="its">it’s</span> <span class="in">in</span> <b>3D<sup>*</sup></b>?</p>
-        <span class="footnote">* beat that, prezi ;)</span>
+      <p><span class="have">have</span> <span class="you">you</span> <span class="noticed">noticed</span> <span class="its">it’s</span> <span class="in">in</span> <b>3D<sup>*</sup></b>?</p>
+      <span class="footnote">* beat that, prezi ;)</span>
     </div>
 
 
     <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10"></div>
 
-</div>
+  </div>
 
-<div id="particles-js"></div>
+  <div id="particles-js"></div>
 
-<script src="js/impress.js"></script>
-<script src="js/particles.min.js"></script>
-<script>
-  impress().init()
+  <script src="js/impress.js"></script>
+  <script src="js/particles.min.js"></script>
+  <script>
+    impress().init()
 
-  /* ---- particles.js config ---- */
-  particlesJS("particles-js", {
-    "particles": {
-      "number": {
-        "value": 20,
-        "density": {
-          "enable": true,
-          "value_area": 1000
-        }
-      },
-      "color": {
-        "value": "#e1e1e1"
-      },
-      "shape": {
-        "type": "circle",
-        "stroke": {
-          "width": 0,
-          "color": "#000000"
-        },
-        "polygon": {
-          "nb_sides": 5
-        },
-        "image": {
-          "src": "img/github.svg",
-          "width": 100,
-          "height": 100
-        }
-      },
-      "opacity": {
-        "value": 0.5,
-        "random": false,
-        "anim": {
-          "enable": false,
-          "speed": 1,
-          "opacity_min": 0.1,
-          "sync": false
-        }
-      },
-      "size": {
-        "value": 15,
-        "random": true,
-        "anim": {
-          "enable": false,
-          "speed": 180,
-          "size_min": 0.1,
-          "sync": false
-        }
-      },
-      "line_linked": {
-        "enable": true,
-        "distance": 650,
-        "color": "#cfcfcf",
-        "opacity": 0.26,
-        "width": 1
-      },
-      "move": {
-        "enable": true,
-        "speed": 2,
-        "direction": "none",
-        "random": true,
-        "straight": false,
-        "out_mode": "out",
-        "bounce": false,
-        "attract": {
-          "enable": false,
-          "rotateX": 600,
-          "rotateY": 1200
-        }
-      }
-    },
-    "interactivity": {
-      "detect_on": "canvas",
-      "events": {
-        "onhover": {
-          "enable": true,
-          "mode": "repulse"
-        },
-        "onclick": {
-          "enable": false,
-          "mode": "push"
-        },
-        "resize": true
-      },
-      "modes": {
-        "grab": {
-          "distance": 400,
-          "line_linked": {
-            "opacity": 1
+    /* ---- particles.js config ---- */
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 20,
+          "density": {
+            "enable": true,
+            "value_area": 1000
           }
         },
-        "bubble": {
-          "distance": 400,
-          "size": 40,
-          "duration": 2,
-          "opacity": 8,
-          "speed": 3
+        "color": {
+          "value": "#e1e1e1"
         },
-        "repulse": {
-          "distance": 200,
-          "duration": 0.4
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          },
+          "polygon": {
+            "nb_sides": 5
+          },
+          "image": {
+            "src": "img/github.svg",
+            "width": 100,
+            "height": 100
+          }
         },
-        "push": {
-          "particles_nb": 4
+        "opacity": {
+          "value": 0.5,
+          "random": false,
+          "anim": {
+            "enable": false,
+            "speed": 1,
+            "opacity_min": 0.1,
+            "sync": false
+          }
         },
-        "remove": {
-          "particles_nb": 2
+        "size": {
+          "value": 15,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 180,
+            "size_min": 0.1,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 650,
+          "color": "#cfcfcf",
+          "opacity": 0.26,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2,
+          "direction": "none",
+          "random": true,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
         }
-      }
-    },
-    "retina_detect": true
-  })
-
-</script>
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "repulse"
+          },
+          "onclick": {
+            "enable": false,
+            "mode": "push"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 400,
+            "line_linked": {
+              "opacity": 1
+            }
+          },
+          "bubble": {
+            "distance": 400,
+            "size": 40,
+            "duration": 2,
+            "opacity": 8,
+            "speed": 3
+          },
+          "repulse": {
+            "distance": 200,
+            "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+      "retina_detect": true
+    })
+  </script>
 
 </body>
+
 </html>

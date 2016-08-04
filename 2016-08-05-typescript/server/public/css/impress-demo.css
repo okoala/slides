@@ -428,3 +428,14 @@ canvas {
   height: 100%;
   z-index: -1;
 }
+
+.color-text {
+  overflow: hidden;
+  background-color: #333;
+  font-weight: bold;
+  font-family: "Oswald";
+  outline: 1px solid transparent;
+  /* -webkit-transform: translateZ(-100px) rotateY(10deg) rotateX(30deg) rotateZ(-10deg); */
+  /* transform: translateZ(-100px) rotateY(10deg) rotateX(30deg) rotateZ(-10deg); */
+  /* -webkit-filter: drop-shadow(-30px 20px 10px rgba(0,0,0,0.4)); */
+}
