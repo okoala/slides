@@ -54,6 +54,7 @@
   <link href="http://fonts.useso.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
 
   <link href="css/impress-demo.css" rel="stylesheet" />
+  <link href="css/solarized-dark.css" rel="stylesheet" />
 
   <link rel="shortcut icon" href="favicon.png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
@@ -67,10 +68,8 @@
   </div>
 
   <div id="impress">
-    <div id="tiny" class="step" data-x="-1000" data-y="-2500">
+    <div class="step tiny" data-x="-1000" data-y="-2500">
       <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" class="color-text" width="600" height="400" viewBox="0 0 1200 400" class="">
-				<!-- add title for accessibility -->
-				<title>Adding Background to Text using SVG clipPath</title>
 				<defs class="">
 					<clipPath id="my-path">
 						<text x="50" y="300" font-size="200">TypeScript</text>
@@ -81,54 +80,198 @@
 			</svg>
     </div>
 
-    <div id="bored" class="step slide" data-x="-1200" data-y="-1500" data-z="-100" data-rotate-x="-40" data-rotate-y="10">
-      <q>Aren’t you just <b>bored</b> with all those slides-based presentations?</q>
+    <div class="step slide" data-x="-1200" data-y="-1500" data-z="-100" data-rotate-x="-40" data-rotate-y="10">
+      <h1 class="slide-title">What is TypeScript?</h1>
+      <ol>
+        <li>1、TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.</li>
+        <li>2、Includes all features of ES6 and much more: types, interfaces, generics, etc...</li>
+        <li>3、Its main goal is to simplify the development and maintenance of large scale JS applications.</li>
+      </ol>
+      <img src="img/002.gif" class="image"/>
     </div>
 
     <div class="step slide" data-x="0" data-y="-1800">
-      <q>Don’t you think that presentations given <strong>in modern browsers</strong> shouldn’t <strong>copy the limits</strong> of ‘classic’ slide decks?</q>
+      <h1 class="slide-title">FEATURE?</h1>
+      <ol>
+        <li>1、Type annotations</li>
+        <li>2、Interfaces</li>
+        <li>3、Generics</li>
+        <li>4、Enums</li>
+        <li>5、Modules</li>
+        <li>6、ECMAScript features</li>
+        <li>7、Many more</li>
+      </ol>
     </div>
 
-    <div class="step slide" data-x="1200" data-y="-2100" data-z="100" data-rotate-x="40" data-rotate-y="-10">
-      <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
+    <div class="step" data-x="1200" data-y="-2100" data-z="100" data-rotate-x="40" data-rotate-y="-10">
+      <h1 class="slide-title">Who is using TypeScript?</h1>
+      <img src="img/microsoft.png"/>
+      <img src="img/angular.png"/>
+      <img src="img/aurelia.png"/>
+      <img src="img/ionic.png"/>
+      <img src="img/nativescript.png"/>
     </div>
 
-    <div class="step playground" data-x="0" data-y="0" data-scale="4">
+    <div class="step slide" data-x="1200" data-y="500" data-z="-400" data-rotate="180">
+      <h1 class="slide-title">Why TypeScript?</h1>
+      <ol>
+        <li>1、Types prevents bugs</li>
+        <li>2、Makes code more readable</li>
+        <li>3、TS aims at supporting the most of the new ES features.</li>
+        <li>4、Support of most of the major IDEs makes code navigation and refactoring much easier.</li>
+        <li>5、TS 1.8 announced JSX support which means it can be effectively used for React development. If you’re into these sort of things</li>
+        <li>6、Created & maintained by Anders Hejlsberg <a href="https://github.com/ahejlsberg?tab=activity" target="_blank">GitHub</a></li>
+      </ol>
+    </div>
+
+    <div class="step playground" data-x="0" data-y="-300" data-scale="4">
       <a class="button-gotoplay" href="http://www.typescriptlang.org/play" target="_blank">Go To Playground</a>
     </div>
 
-    <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
-      <p>It’s a <strong>presentation tool</strong> <br/> inspired by the idea behind <a href="http://prezi.com">prezi.com</a> <br/> and based on the <strong>power of CSS3 transforms and transitions</strong> in modern browsers.</p>
+    <div class="step" data-x="8500" data-y="3000" data-rotate="90" data-scale="5">
+      <div class="code">
+        <h1 class="slide-title">Basic Example</h1>
+        <pre>
+          <code>
+    let size: number = 3
+    let person: string = "Marco"
+    let integers: Array<number> = [1, 2, 3]
+    let elem: HTMLElement = document.getElementById('my-elem')
+    size = 'Polo' //Type 'string' is not assignable to type 'number'.
+          </code>
+        </pre>
+      </div>
     </div>
 
-    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
-      <p>visualize your <b>big</b> <span class="thoughts">thoughts</span></p>
+    <div class="step" data-x="8500" data-y="9000" data-rotate="45" data-scale="5">
+      <div class="code">
+        <h1 class="slide-title">Special "any" type allow all kinds of values</h1>
+        <pre>
+          <code>
+    let foo: any
+    foo = 2
+    foo = 'Paris'
+    foo = [1, 2, 3]
+          </code>
+        </pre>
+      </div>
     </div>
 
-    <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
-      <p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b class="scaling">scaling</b> them on an infinite canvas</p>
+    <div class="step" data-x="8500" data-y="15000" data-rotate="90" data-scale="5">
+      <div class="code">
+        <h1 class="slide-title">Complex types can be defined inline</h1>
+        <pre>
+          <code>
+    let user: {
+      name: string,
+      age: number,
+      address: {
+        city: string,
+        country: string
+      }
+    }
+
+    user = { name: 'Marco', age: 20 } // Property 'address' is missing
+          </code>
+        </pre>
+      </div>
     </div>
 
-    <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
-      <p>the only <b>limit</b> is your <b class="imagination">imagination</b></p>
+    <div class="step" data-x="8500" data-y="21000" data-rotate="45" data-scale="5">
+      <div class="code">
+        <h1 class="slide-title">Properties can be optional if followed by "?"</h1>
+        <pre>
+          <code>
+    let user: {
+      name: string,
+      age: number,
+      address?: {
+        city: string,
+        country: string
+      }
+    }
+
+    user = { name: 'Marco', age: 20 } // OK
+          </code>
+        </pre>
+      </div>
     </div>
 
-    <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
-      <p>want to know more?</p>
-      <q><a href="http://github.com/bartaz/impress.js">use the source</a>, Luke!</q>
+    <div class="step" data-x="2500" data-y="21000" data-rotate="45" data-scale="5">
+      <div class="code">
+        <h1 class="slide-title">Interface</h1>
+        <pre>
+          <code>
+    interface User {
+      name: string
+      age: number
+      address: Address
+    }
+    interface Address {
+      city: string
+      country: string
+    }
+
+    let user: User
+          </code>
+        </pre>
+      </div>
     </div>
 
-    <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
-      <p>one more thing...</p>
+    <div class="step" data-x="-3500" data-y="21000" data-rotate="45" data-scale="5">
+      <div class="code">
+        <h1 class="slide-title">Interface</h1>
+        <pre>
+          <code>
+    class Person {
+      title: string
+      protected name: string
+      private lastname: string
+    }
+    const user = new Person()
+    user.title = 'MR'
+    user.name = 'Rob' // Error
+    user.lastname = 'Willson' // Error
+          </code>
+        </pre>
+      </div>
     </div>
 
-    <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
-      <p><span class="have">have</span> <span class="you">you</span> <span class="noticed">noticed</span> <span class="its">it’s</span> <span class="in">in</span> <b>3D<sup>*</sup></b>?</p>
-      <span class="footnote">* beat that, prezi ;)</span>
+    <div class="step" data-x="-3500" data-y="21000" data-z="0" data-rotate="360" data-scale="1">
+      <div class="code">
+        <h1 class="slide-title">Installation</h1>
+        <pre>
+          <code>
+    npm i typescript@next -g
+
+    tsc hello.ts
+          </code>
+        </pre>
+      </div>
     </div>
 
+    <div class="step" data-x="6000" data-y="2500" data-scale="3">
+      <h1 class="slide-title">References</h1>
+      <ul class="references">
+        <li><a href="http://www.typescriptlang.org/" target="_blank">TypeScript</a></li>
+        <li><a href="https://zhongsp.gitbooks.io/typescript-handbook/content/" target="_blank">TypeScript Handbook（中文版）</a></li>
+        <li><a href="https://davidcai1993.gitbooks.io/typescript-handbook/content/index.html" target="_blank">Typescript 手册</a></li>
+        <li><a href="http://www.infoq.com/cn/news/2015/11/anders-hejlsberg-typescript" target="_blank">Delphi、C#之父Anders Hejlsberg首次访华 推广TypeScript</a></li>
+        <li><a href="https://medium.com/ants-blog/beat-the-typescript-monster-d3653458a1fe#.c3ng3fm5n" target="_blank">Beat the Typescript Monster</a></li>
+        <li><a href="http://staltz.com/all-js-libraries-should-be-authored-in-typescript.html" target="_blank">all-js-libraries-should-be-authored-in-typescript</a></li>
+      </ul>
+    </div>
 
-    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10"></div>
+    <div class="step tiny" data-x="6000" data-y="5500">
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" class="color-text" width="600" height="400" viewBox="0 0 1200 400" class="">
+				<defs class="">
+					<clipPath id="my-path">
+						<text x="50" y="300" font-size="200">Think You!</text>
+					</clipPath>
+				</defs>
+				<image xlink:href="img/watercolor.jpg" clip-path="url(#my-path)" width="100%" height="550px" id="filler" preserveAspectRatio="none" class=""></image>
+			</svg>
+    </div>
 
   </div>
 
@@ -136,8 +279,13 @@
 
   <script src="js/impress.js"></script>
   <script src="js/particles.min.js"></script>
+  <script src="js/highlight.js"></script>
   <script>
     impress().init()
+    var snippets = document.querySelectorAll('code')
+    Array.prototype.slice.call(snippets).map(snippet => {
+      hljs.highlightBlock(snippet)
+    })
 
     /* ---- particles.js config ---- */
     particlesJS("particles-js", {
