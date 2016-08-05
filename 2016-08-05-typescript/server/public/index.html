@@ -135,10 +135,13 @@
         <pre>
           <code>
     let size: number = 3
+    let list: number[] = [1, 2, 3]
     let person: string = "Marco"
-    let integers: Array<number> = [1, 2, 3]
-    let elem: HTMLElement = document.getElementById('my-elem')
     size = 'Polo' //Type 'string' is not assignable to type 'number'.
+
+    enum Color {Red = 1, Green, Blue}
+    let c: Color = Color.Green
+    let colorName: string = Color[2]
           </code>
         </pre>
       </div>
@@ -221,7 +224,7 @@
 
     <div class="step" data-x="-3500" data-y="21000" data-rotate="45" data-scale="5">
       <div class="code">
-        <h1 class="slide-title">Interface</h1>
+        <h1 class="slide-title">Public, private, and protected</h1>
         <pre>
           <code>
     class Person {
